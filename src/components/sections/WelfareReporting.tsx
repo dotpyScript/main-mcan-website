@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { MessageCircle, PhoneCall, Siren } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 
 const WHATSAPP_MESSAGE =
@@ -59,15 +60,16 @@ const WelfareReporting = () => {
             </div>
 
             <div className='flex flex-col items-start gap-4 lg:items-end'>
-              <a
+              <Button
                 href={whatsappHref}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='group inline-flex items-center gap-2.5 rounded-full bg-paper px-7 py-4 text-[15px] font-semibold text-ember-night shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] transition-colors hover:bg-gold-soft'
+                external
+                tone='onDark'
+                variant='solid'
+                icon={MessageCircle}
+                className='text-ember-night shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)]'
               >
-                <MessageCircle className='size-5' />
                 Report Welfare Issue Now
-              </a>
+              </Button>
               <a
                 href={`tel:${SITE.emergencyPhone}`}
                 className='inline-flex items-center gap-2 text-sm font-medium text-paper/70 transition-colors hover:text-paper'

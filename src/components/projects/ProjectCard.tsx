@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Heart, HandHeart } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 import { formatNaira, progressPercent } from './utils';
 import type { Project } from './data';
@@ -51,22 +51,25 @@ const ProjectCard = ({ project }: { project: Project }) => {
         </div>
 
         <div className="mt-5 flex items-center gap-2.5">
-          <a
+          <Button
             href={SITE.donateUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full bg-forest-night px-4 py-2.5 text-[13px] font-semibold text-paper transition-colors hover:bg-forest"
+            external
+            size="sm"
+            variant="solid"
+            icon={Heart}
+            fullWidth
           >
-            <Heart className="size-3.5" />
             Donate
-          </a>
-          <Link
+          </Button>
+          <Button
             href="/about#contact"
-            className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-full border border-line-strong px-4 py-2.5 text-[13px] font-semibold text-ink transition-colors hover:border-forest/40 hover:text-forest"
+            size="sm"
+            variant="outline"
+            icon={HandHeart}
+            fullWidth
           >
-            <HandHeart className="size-3.5" />
             Sponsor
-          </Link>
+          </Button>
         </div>
       </div>
     </div>

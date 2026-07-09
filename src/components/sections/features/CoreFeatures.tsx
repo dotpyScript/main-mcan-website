@@ -135,7 +135,7 @@ const DesktopScrollytelling = () => {
 
 const MobileFeatureList = () => {
   return (
-    <section className='relative min-h-dvh overflow-hidden rounded-t-[2.5rem] border-t border-white/10 bg-forest-night px-6 pb-20 pt-16 shadow-[0_-40px_80px_-40px_rgba(0,0,0,0.5)] lg:hidden'>
+    <section className='relative min-h-dvh overflow-hidden border-white/10 bg-forest-night px-6 pb-20 pt-16 shadow-[0_-40px_80px_-40px_rgba(0,0,0,0.5)] lg:hidden'>
       <div className='pointer-events-none absolute inset-0 bg-dot-grid-dark opacity-30 [mask-image:radial-gradient(ellipse_70%_50%_at_20%_10%,#000,transparent_70%)]' />
       <p className='label-mono relative text-[11px] text-gold-soft'>
         Tailored core features

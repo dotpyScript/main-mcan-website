@@ -29,7 +29,7 @@ const OurLodges = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Open ${lodge.name} in Google Maps`}
-              className={`group relative overflow-hidden rounded-3xl ${
+              className={`group relative aspect-4/3 overflow-hidden rounded-3xl lg:aspect-auto ${
                 i === FEATURE_INDEX
                   ? 'sm:col-span-2 lg:col-span-2 lg:row-span-2'
                   : ''

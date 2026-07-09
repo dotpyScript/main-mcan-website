@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
 
 const STATS = [
   { value: "42", label: "Active Lodges", note: "Verified across the state" },
@@ -24,13 +25,15 @@ const CtaBanner = () => {
           arrive at camp — MCAN is often one of the first communities corps
           members find.
         </p>
-        <a
+        <Button
           href="#chapters"
-          className="group mt-8 inline-flex items-center gap-2 rounded-full bg-paper px-7 py-3.5 text-[15px] font-semibold text-forest-night transition-colors hover:bg-gold-soft"
+          tone="onDark"
+          variant="solid"
+          trailingIcon={ArrowRight}
+          className="mt-8"
         >
           Browse state chapters
-          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-        </a>
+        </Button>
       </div>
 
       <div className="relative mx-auto mt-16 grid max-w-4xl grid-cols-1 divide-y divide-white/10 border-y border-white/10 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">

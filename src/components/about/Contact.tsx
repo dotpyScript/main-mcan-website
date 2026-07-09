@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 
 const REASONS = [
@@ -188,14 +189,15 @@ const Contact = () => {
                   </p>
                 )}
 
-                <button
+                <Button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="group inline-flex w-fit items-center gap-2 rounded-full bg-forest-night px-7 py-3.5 text-[15px] font-semibold text-paper transition-colors hover:bg-forest disabled:opacity-60 sm:col-span-2"
+                  variant="solid"
+                  trailingIcon={Send}
+                  className="w-fit disabled:opacity-60 sm:col-span-2"
                 >
                   {status === 'submitting' ? 'Sending…' : 'Send message'}
-                  <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
-                </button>
+                </Button>
               </div>
             )}
           </form>

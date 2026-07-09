@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { NAV_LINKS, SITE } from '@/lib/constants';
 
 const Navbar = () => {
@@ -58,15 +59,16 @@ const Navbar = () => {
         </div>
 
         <div className='hidden items-center gap-3 md:flex'>
-          <a
+          <Button
             href={SITE.donateUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='group inline-flex items-center gap-1.5 rounded-full bg-forest px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-forest-deep'
+            external
+            size='md'
+            variant='solid'
+            trailingIcon={ArrowUpRight}
+            className='bg-forest hover:bg-forest-deep'
           >
             Donate
-            <ArrowUpRight className='size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
-          </a>
+          </Button>
         </div>
 
         <button
@@ -92,15 +94,17 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-          <a
+          <Button
             href={SITE.donateUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='mt-4 flex items-center justify-center gap-1.5 rounded-full bg-forest px-5 py-3 text-sm font-semibold text-paper'
+            external
+            size='md'
+            variant='solid'
+            trailingIcon={ArrowUpRight}
+            fullWidth
+            className='mt-4 bg-forest hover:bg-forest-deep'
           >
             Give to the Lodge
-            <ArrowUpRight className='size-4' />
-          </a>
+          </Button>
         </div>
       )}
     </header>

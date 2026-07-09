@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowRight, MapPin } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 import FloatingGallery from './hero/FloatingGallery';
 
@@ -64,19 +65,17 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.25 }}
           className='mt-10 flex flex-col items-center gap-4 sm:flex-row'
         >
-          <a
+          <Button
             href='#chapters'
-            className='group inline-flex items-center gap-2 rounded-full bg-ink px-7 py-3.5 text-[15px] font-semibold text-paper transition-colors hover:bg-forest-night'
+            variant='solid'
+            trailingIcon={ArrowRight}
+            className='bg-ink hover:bg-forest-night'
           >
             Find Lodge
-            <ArrowRight className='size-4 transition-transform group-hover:translate-x-1' />
-          </a>
-          <a
-            href='#mission'
-            className='inline-flex items-center gap-2 rounded-full border border-line-strong bg-transparent px-7 py-3.5 text-[15px] font-semibold text-ink transition-colors hover:bg-ink/5'
-          >
+          </Button>
+          <Button href='#mission' variant='outline'>
             NYSC Camp Guide
-          </a>
+          </Button>
         </motion.div>
       </div>
     </section>
