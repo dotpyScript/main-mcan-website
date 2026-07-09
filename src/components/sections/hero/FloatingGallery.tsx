@@ -67,7 +67,7 @@ const FloatingGallery = () => {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-x-0 top-28 bottom-0 hidden transition-transform duration-300 lg:block lg:scale-75 xl:scale-100"
+      className="absolute inset-x-0 top-28 bottom-0 hidden xl:block"
       aria-hidden
     >
       <svg className="pointer-events-none absolute inset-0 h-full w-full overflow-visible">
