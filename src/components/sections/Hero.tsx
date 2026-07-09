@@ -43,7 +43,7 @@ const Hero = () => {
           One Ummah, serving
           <br />
           <span className='text-gradient-forest'>
-            Islam through the nation.
+            Islam across Rivers State.
           </span>
         </motion.h1>
 
@@ -53,7 +53,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
           className='mt-7 max-w-2xl text-center text-lg leading-relaxed text-ink-soft text-balance'
         >
-          The national home of Muslim corps members Rivers state coordinating
+          The home of Muslim corps members serving Rivers State, coordinating
           dawah, welfare, and mentorship, from orientation camp to passing out
           and beyond.
         </motion.p>

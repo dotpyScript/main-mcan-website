@@ -1,8 +1,11 @@
 export const SITE = {
   name: 'MCAN',
   fullName: 'Rivers State Muslim Corpers',
-  tagline: 'Serving Islam Through The Nation',
+  tagline: 'Serving Islam Across Rivers State',
   donateUrl: 'https://donate.mcan.com.ng',
+  // Placeholder — replace with the real Welfare Officer line before launch.
+  emergencyWhatsapp: '2348000000000',
+  emergencyPhone: '+2348000000000',
 };
 
 export const NAV_LINKS = [

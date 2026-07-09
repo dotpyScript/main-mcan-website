@@ -28,9 +28,9 @@ const Footer = () => {
               </span>
             </div>
             <p className='mt-4 max-w-sm text-sm leading-relaxed text-ink-soft'>
-              The national coordinating body for Muslim corps members serving
-              across Nigeria&apos;s NYSC scheme — one association, thirty-six
-              state chapters, and the FCT.
+              The coordinating body for Muslim corps members serving Rivers
+              State&apos;s NYSC scheme — one association, chapters across
+              every local government area.
             </p>
             <div className='mt-6 flex items-center gap-3'>
               {SOCIALS.map((social) => (

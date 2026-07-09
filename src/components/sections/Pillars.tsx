@@ -27,18 +27,18 @@ const PILLARS = [
     icon: Compass,
     title: "Unity",
     description:
-      "Building brotherhood and sisterhood across states, cultures, and backgrounds under one national body.",
+      "Building brotherhood and sisterhood across local government areas, cultures, and backgrounds under one state body.",
   },
 ];
 
 const Pillars = () => {
   return (
-    <section id="mission" className="bg-paper py-24 lg:py-32">
+    <section id="mission" className="bg-paper-2 py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="label-mono text-[11px] text-forest">Our mission</p>
           <h2 className="mt-4 text-3xl font-semibold tracking-tight text-ink text-balance sm:text-4xl">
-            Four pillars, one national purpose
+            Four pillars, one shared purpose
           </h2>
           <p className="mt-4 text-base leading-relaxed text-ink-soft">
             Every chapter of MCAN — from orientation camps to local

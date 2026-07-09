@@ -6,7 +6,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* ── MCAN National brand tokens ─────────────────────────────────────── */
+  /* ── MCAN Rivers State brand tokens ─────────────────────────────────── */
   --color-paper: #faf9f6;
   --color-paper-2: #f2f0ea;
   --color-ink: #0c1a14;
@@ -19,6 +19,7 @@
   --color-gold-soft: #d8bd86;
   --color-line: rgba(12, 26, 20, 0.1);
   --color-line-strong: rgba(12, 26, 20, 0.16);
+  --color-ember-night: #1c120f;
 }
 
 :root {
