@@ -4,6 +4,7 @@ export type Executive = {
   role: string;
   lga: string;
   initials: string;
+  mandate: string;
 };
 
 export const EXECUTIVES: Executive[] = [
@@ -13,6 +14,8 @@ export const EXECUTIVES: Executive[] = [
     role: 'Amir (President)',
     lga: 'Port Harcourt',
     initials: 'AY',
+    mandate:
+      'Leads the chapter, represents MCAN Rivers State, and chairs the executive council.',
   },
   {
     id: 'naib-amirah',
@@ -20,6 +23,7 @@ export const EXECUTIVES: Executive[] = [
     role: "Naib Amirah (Vice President)",
     lga: 'Obio-Akpor',
     initials: 'FB',
+    mandate: "Deputises for the Amir and leads the sisters' wing of the chapter.",
   },
   {
     id: 'gen-sec',
@@ -27,6 +31,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'General Secretary',
     lga: 'Eleme',
     initials: 'IS',
+    mandate: 'Keeps chapter records and correspondence, and coordinates EXCO meetings.',
   },
   {
     id: 'asst-sec',
@@ -34,6 +39,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'Assistant Secretary',
     lga: 'Okrika',
     initials: 'AM',
+    mandate: 'Supports the Secretary and stands in during their absence.',
   },
   {
     id: 'fin-sec',
@@ -41,6 +47,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'Financial Secretary',
     lga: 'Ikwerre',
     initials: 'YA',
+    mandate: 'Tracks dues and donations, and prepares financial reports.',
   },
   {
     id: 'treasurer',
@@ -48,6 +55,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'Treasurer',
     lga: 'Emuoha',
     initials: 'ZI',
+    mandate: 'Holds and disburses chapter funds for approved activities.',
   },
   {
     id: 'pro',
@@ -55,6 +63,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'Public Relations Officer',
     lga: 'Bonny',
     initials: 'MA',
+    mandate: 'Manages chapter communications, publicity, and external relations.',
   },
   {
     id: 'welfare',
@@ -62,6 +71,7 @@ export const EXECUTIVES: Executive[] = [
     role: 'Welfare Officer',
     lga: 'Etche',
     initials: 'HS',
+    mandate: 'Coordinates lodging, feeding, and emergency support for members.',
   },
   {
     id: 'dawah',
@@ -69,5 +79,6 @@ export const EXECUTIVES: Executive[] = [
     role: "Da'wah Coordinator",
     lga: 'Tai',
     initials: 'UF',
+    mandate: "Organises halaqas, lectures, and outreach in host communities.",
   },
 ];

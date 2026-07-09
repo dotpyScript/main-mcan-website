@@ -77,6 +77,16 @@ body {
     );
     background-size: 22px 22px;
   }
+
+  /* Hides the scrollbar on horizontally-scrollable carousels */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @keyframes marquee {

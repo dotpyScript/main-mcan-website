@@ -1,5 +1,11 @@
 import { ArrowRight } from "lucide-react";
 
+const STATS = [
+  { value: "42", label: "Active Lodges", note: "Verified across the state" },
+  { value: "650+", label: "Muslim Corpers Deployed", note: "Active members" },
+  { value: "6", label: "Ongoing Dawah Projects", note: "State-wide programs" },
+];
+
 const CtaBanner = () => {
   return (
     <section className="relative isolate overflow-hidden bg-forest-night py-24 lg:py-28">
@@ -25,6 +31,25 @@ const CtaBanner = () => {
           Browse state chapters
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
         </a>
+      </div>
+
+      <div className="relative mx-auto mt-16 grid max-w-4xl grid-cols-1 divide-y divide-white/10 border-y border-white/10 px-6 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:px-10">
+        {STATS.map((stat) => (
+          <div
+            key={stat.label}
+            className="flex flex-col items-center gap-1.5 px-6 py-8 text-center"
+          >
+            <span className="text-4xl font-semibold tracking-tight text-paper sm:text-5xl">
+              {stat.value}
+            </span>
+            <span className="text-sm font-medium text-paper/80">
+              {stat.label}
+            </span>
+            <span className="label-mono text-[10px] text-gold-soft">
+              {stat.note}
+            </span>
+          </div>
+        ))}
       </div>
     </section>
   );
