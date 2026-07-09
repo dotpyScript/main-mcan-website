@@ -31,7 +31,7 @@ const HadithOfTheDay = () => {
 
   return (
     <section
-      className='bg-paper py-24 lg:py-32 lg:mb-12'
+      className='bg-paper py-20 lg:py-32 lg:mb-12'
       onMouseEnter={() => {
         isPaused.current = true;
       }}
@@ -45,12 +45,12 @@ const HadithOfTheDay = () => {
           <div className='pointer-events-none absolute -right-20 top-1/2 h-80 w-80 -translate-y-1/2 rounded-full bg-gold/20 blur-[120px]' />
 
           <div className='relative grid gap-12 lg:grid-cols-[260px_1fr] lg:gap-16'>
-            <div className='flex flex-col'>
+            <div className='order-2 flex flex-col lg:order-1'>
               <p className='label-mono text-[11px] text-forest'>
                 Hadith of the day
               </p>
 
-              <div className='mt-6 flex flex-col gap-3'>
+              <div className='mt-6 hidden flex-col gap-3 sm:flex'>
                 {slots.map((slotIndex) => {
                   const item = HADITHS[slotIndex];
                   const isActive = slotIndex === active;
@@ -103,7 +103,7 @@ const HadithOfTheDay = () => {
               </div>
             </div>
 
-            <div className='relative flex min-h-[220px] flex-col justify-between'>
+            <div className='order-1 relative flex min-h-80 flex-col justify-between lg:order-2 lg:min-h-55'>
               <AnimatePresence mode='wait'>
                 <motion.blockquote
                   key={hadith.id}

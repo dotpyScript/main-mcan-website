@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { ArrowUpRight, Building2 } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 
 const About = () => {
@@ -45,15 +45,17 @@ const About = () => {
             </p>
           </div>
 
-          <Link
+          <Button
             href={SITE.donateUrl}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='group relative mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-paper px-6 py-3 text-sm font-semibold text-forest-night transition-colors hover:bg-gold-soft'
+            external
+            tone='onDark'
+            variant='solid'
+            size='md'
+            trailingIcon={ArrowUpRight}
+            className='relative mt-8 w-fit'
           >
             Visit donate.mcan.com.ng
-            <ArrowUpRight className='size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5' />
-          </Link>
+          </Button>
         </div>
       </div>
     </section>

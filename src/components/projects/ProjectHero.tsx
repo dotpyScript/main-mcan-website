@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Flame, Heart, HandHeart } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 import { formatNaira, progressPercent } from './utils';
 import type { Project } from './data';
@@ -9,7 +9,7 @@ const ProjectHero = ({ project }: { project: Project }) => {
   const percent = progressPercent(project.raised, project.goal);
 
   return (
-    <section className='bg-paper px-6 pb-16 pt-10 lg:px-10 lg:pt-20'>
+    <section className='bg-paper px-6 pb-16 pt-24 lg:px-10 lg:pt-20'>
       <div className='relative isolate mx-auto h-[80dvh] min-h-[34rem] w-full max-w-[120rem] overflow-hidden rounded-[1.5rem] sm:rounded-[1.5rem]'>
         <Image
           src={project.image}
@@ -62,22 +62,23 @@ const ProjectHero = ({ project }: { project: Project }) => {
           </div>
 
           <div className='flex flex-wrap items-center gap-3'>
-            <a
+            <Button
               href={SITE.donateUrl}
-              target='_blank'
-              rel='noopener noreferrer'
-              className='group inline-flex items-center gap-2 rounded-full bg-paper px-7 py-3.5 text-[15px] font-semibold text-forest-night transition-colors hover:bg-gold-soft'
+              external
+              tone='onDark'
+              variant='solid'
+              icon={Heart}
             >
-              <Heart className='size-4' />
               Donate
-            </a>
-            <Link
+            </Button>
+            <Button
               href='/about#contact'
-              className='inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-[15px] font-semibold text-paper backdrop-blur-sm transition-colors hover:bg-white/15'
+              tone='onDark'
+              variant='outline'
+              icon={HandHeart}
             >
-              <HandHeart className='size-4' />
               Sponsor
-            </Link>
+            </Button>
           </div>
         </div>
       </div>

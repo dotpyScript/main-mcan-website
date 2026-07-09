@@ -1,4 +1,5 @@
 import { CalendarPlus, Clock, MapPin } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { buildIcsHref, dateTile } from './utils';
 import type { EventItem } from './data';
 
@@ -65,14 +66,17 @@ const UpcomingEvents = ({ events }: { events: EventItem[] }) => {
                   </div>
                 </div>
 
-                <a
+                <Button
                   href={icsHref}
+                  external
                   download={`${event.id}.ics`}
-                  className="inline-flex items-center gap-2 self-start rounded-full border border-line-strong px-4 py-2.5 text-[13px] font-semibold text-ink transition-colors hover:border-forest/40 hover:text-forest sm:self-center"
+                  size="sm"
+                  variant="outline"
+                  icon={CalendarPlus}
+                  className="self-start sm:self-center"
                 >
-                  <CalendarPlus className="size-3.5" />
                   Add
-                </a>
+                </Button>
               </div>
             );
           })}

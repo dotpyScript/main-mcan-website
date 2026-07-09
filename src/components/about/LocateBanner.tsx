@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { MapPin, Tent, ExternalLink } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 
 const LocateBanner = () => {
@@ -24,23 +24,24 @@ const LocateBanner = () => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-3">
-            <Link
+            <Button
               href="/projects#lodges"
-              className="group inline-flex items-center gap-2 rounded-full bg-paper px-7 py-3.5 text-[15px] font-semibold text-forest-night transition-colors hover:bg-gold-soft"
+              tone="onDark"
+              variant="solid"
+              icon={MapPin}
             >
-              <MapPin className="size-4" />
               Locate Lodge
-            </Link>
-            <a
+            </Button>
+            <Button
               href={SITE.nyscCampMapUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-3.5 text-[15px] font-semibold text-paper backdrop-blur-sm transition-colors hover:bg-white/15"
+              external
+              tone="onDark"
+              variant="outline"
+              icon={Tent}
+              trailingIcon={ExternalLink}
             >
-              <Tent className="size-4" />
               Locate NYSC Camp
-              <ExternalLink className="size-3.5 opacity-60 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </a>
+            </Button>
           </div>
         </div>
       </div>
