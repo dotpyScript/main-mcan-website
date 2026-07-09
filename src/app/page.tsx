@@ -7,6 +7,7 @@ import Pillars from '@/components/sections/Pillars';
 import Executives from '@/components/sections/Executives';
 import WelfareReporting from '@/components/sections/WelfareReporting';
 import CtaBanner from '@/components/sections/CtaBanner';
+import Contact from '@/components/about/Contact';
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Pillars />
       <WelfareReporting />
       <CtaBanner />
+      <Contact />
     </>
   );
 }

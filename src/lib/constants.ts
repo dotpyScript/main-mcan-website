@@ -9,12 +9,14 @@ export const SITE = {
   // Placeholder — replace with the chapter's real general contact details.
   contactEmail: 'hello@mcanriversstate.ng',
   lodgeAddress: 'MCAN Lodge, off Aba Road, Port Harcourt, Rivers State',
+  nyscCampMapUrl:
+    'https://www.google.com/maps/search/?api=1&query=NYSC+Orientation+Camp+Nonwa+Rivers+State+Nigeria',
 };
 
 export const NAV_LINKS = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Projects/Lodges', href: '/projects' },
+  { label: 'Projects', href: '/projects' },
   { label: 'Events', href: '/events' },
   // { label: 'Impact', href: '#impact' },
 ];

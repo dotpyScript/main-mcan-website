@@ -1,12 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, BookOpen } from 'lucide-react';
 import { HADITHS } from './hadith/data';
 
+const AUTOPLAY_MS = 5000;
+
 const HadithOfTheDay = () => {
   const [active, setActive] = useState(0);
+  const isPaused = useRef(false);
   const length = HADITHS.length;
 
   const goTo = (index: number) =>
@@ -14,12 +17,28 @@ const HadithOfTheDay = () => {
   const next = () => goTo(active + 1);
   const prev = () => goTo(active - 1);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (isPaused.current) return;
+      setActive((prev) => (prev + 1) % length);
+    }, AUTOPLAY_MS);
+    return () => clearInterval(timer);
+  }, [length]);
+
   const windowStart = Math.floor(active / 2) * 2;
   const slots = [windowStart, (windowStart + 1) % length];
   const hadith = HADITHS[active];
 
   return (
-    <section className='bg-paper py-24 lg:py-32 lg:mb-12'>
+    <section
+      className='bg-paper py-24 lg:py-32 lg:mb-12'
+      onMouseEnter={() => {
+        isPaused.current = true;
+      }}
+      onMouseLeave={() => {
+        isPaused.current = false;
+      }}
+    >
       <div className='px-6 lg:px-10'>
         <div className='relative isolate min-h-144 overflow-hidden rounded-[2.5rem] border border-line-strong bg-paper-2 px-8 py-14 sm:px-12 lg:px-16 lg:py-20'>
           <div className='pointer-events-none absolute inset-0 bg-dot-grid opacity-40 [mask-image:radial-gradient(ellipse_60%_60%_at_20%_20%,#000,transparent_70%)]' />
