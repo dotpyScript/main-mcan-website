@@ -43,7 +43,7 @@ export const FEATURES: FeatureSlide[] = [
     description:
       'Connect with elite Muslim professionals in local Oil & Gas/Maritime sectors.',
     cta: 'Join Network',
-    image: '/images/sisterhood.jpg',
+    image: '/images/sisterhood.png',
   },
   {
     id: 'halal-directory',
@@ -52,7 +52,7 @@ export const FEATURES: FeatureSlide[] = [
     description:
       'An interactive map detailing certified dining spots, central mosques & shops.',
     cta: 'View Directory',
-    image: '/images/welfare.jpg',
+    image: '/images/welfare.png',
   },
   {
     id: 'alumni-network',
@@ -70,6 +70,6 @@ export const FEATURES: FeatureSlide[] = [
     description:
       'Download audio archives and text summaries of weekly Friday sermons.',
     cta: 'Browse Archives',
-    image: '/images/future.jpg',
+    image: '/images/feature.png',
   },
 ];

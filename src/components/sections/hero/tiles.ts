@@ -42,7 +42,7 @@ export const LEFT_TILES: TileConfig[] = [
   {
     id: 'sisterhood',
     label: 'Sisterhood',
-    src: '/images/sisterhood.jpg',
+    src: '/images/sisterhood.png',
     top: '68%',
     offset: '12%',
     width: 70,
@@ -71,7 +71,7 @@ export const RIGHT_TILES: TileConfig[] = [
   {
     id: 'welfare',
     label: 'Welfare',
-    src: '/images/welfare.jpg',
+    src: '/images/welfare.png',
     top: '36%',
     offset: '32%',
     width: 50,
@@ -84,7 +84,7 @@ export const RIGHT_TILES: TileConfig[] = [
   {
     id: 'future',
     label: 'Future',
-    src: '/images/future.jpg',
+    src: '/images/feature.png',
     top: '66%',
     offset: '14%',
     width: 70,
