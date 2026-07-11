@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id='home'
-      className='relative isolate overflow-hidden bg-paper pt-36 pb-20 lg:min-h-200 lg:pt-44 lg:pb-28'
+      className='relative isolate flex h-full flex-col justify-center overflow-hidden bg-paper pt-36 pb-20 lg:min-h-200 lg:pt-44 lg:pb-28'
     >
       {/* Ambient background */}
       <div className='pointer-events-none absolute inset-0 -z-10'>

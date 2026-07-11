@@ -5,6 +5,7 @@ const SOCIALS = [
   { label: 'X', name: 'X (Twitter)' },
   { label: 'IG', name: 'Instagram' },
   { label: 'FB', name: 'Facebook' },
+  { label: 'WA', name: 'whatsapp' },
 ];
 
 const Footer = () => {
@@ -29,8 +30,8 @@ const Footer = () => {
             </div>
             <p className='mt-4 max-w-sm text-sm leading-relaxed text-ink-soft'>
               The coordinating body for Muslim corps members serving Rivers
-              State&apos;s NYSC scheme — one association, chapters across
-              every local government area.
+              State&apos;s NYSC scheme — one association, chapters across every
+              local government area.
             </p>
             <div className='mt-6 flex items-center gap-3'>
               {SOCIALS.map((social) => (
