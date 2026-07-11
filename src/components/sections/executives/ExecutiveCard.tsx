@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 import type { Executive } from './data';
@@ -57,16 +58,28 @@ const ExecutiveCard = ({
       } ${isActive ? 'cursor-default' : 'cursor-pointer'}`}
     >
       <div className="relative h-[300px] w-full sm:h-[360px]">
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${PALETTES[paletteIndex % PALETTES.length]}`}
-        />
-        <div className="pointer-events-none absolute inset-0 bg-dot-grid-dark opacity-25" />
-        <span
-          aria-hidden
-          className="absolute -bottom-3 right-2 select-none text-[6rem] font-semibold leading-none tracking-tight text-paper/10 sm:text-[7rem]"
-        >
-          {executive.initials}
-        </span>
+        {executive.image ? (
+          <Image
+            src={executive.image}
+            alt={executive.name}
+            fill
+            sizes="260px"
+            className="object-cover"
+          />
+        ) : (
+          <>
+            <div
+              className={`absolute inset-0 bg-gradient-to-br ${PALETTES[paletteIndex % PALETTES.length]}`}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-dot-grid-dark opacity-25" />
+            <span
+              aria-hidden
+              className="absolute -bottom-3 right-2 select-none text-[6rem] font-semibold leading-none tracking-tight text-paper/10 sm:text-[7rem]"
+            >
+              {executive.initials}
+            </span>
+          </>
+        )}
         <div className="absolute inset-0 bg-gradient-to-t from-forest-night/90 via-forest-night/15 to-transparent" />
 
         <span className="absolute left-3.5 top-3.5 inline-flex items-center rounded-full bg-white/10 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-wide text-paper backdrop-blur-sm sm:left-4 sm:top-4">

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { EXECUTIVES } from '@/components/sections/executives/data';
 
@@ -38,9 +39,21 @@ const CorpsExecutives = () => {
             >
               <div className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full bg-forest/40 blur-[90px]" />
               <div className="relative flex items-start gap-5">
-                <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-forest to-forest-night text-lg font-semibold tracking-tight text-paper ring-4 ring-gold-soft/40">
-                  {exec.initials}
-                </span>
+                {exec.image ? (
+                  <span className="relative size-16 shrink-0 overflow-hidden rounded-2xl ring-4 ring-gold-soft/40">
+                    <Image
+                      src={exec.image}
+                      alt={exec.name}
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
+                  </span>
+                ) : (
+                  <span className="flex size-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-forest to-forest-night text-lg font-semibold tracking-tight text-paper ring-4 ring-gold-soft/40">
+                    {exec.initials}
+                  </span>
+                )}
                 <div>
                   <p className="label-mono text-[10px] text-gold-soft">
                     {exec.lga} LGA
@@ -71,9 +84,21 @@ const CorpsExecutives = () => {
               className="group rounded-3xl border border-line-strong bg-paper p-6 transition-colors hover:border-forest/30"
             >
               <div className="flex items-center gap-4">
-                <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-forest/10 text-sm font-semibold tracking-tight text-forest transition-colors group-hover:bg-forest group-hover:text-paper">
-                  {exec.initials}
-                </span>
+                {exec.image ? (
+                  <span className="relative size-12 shrink-0 overflow-hidden rounded-xl">
+                    <Image
+                      src={exec.image}
+                      alt={exec.name}
+                      fill
+                      sizes="48px"
+                      className="object-cover"
+                    />
+                  </span>
+                ) : (
+                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-forest/10 text-sm font-semibold tracking-tight text-forest transition-colors group-hover:bg-forest group-hover:text-paper">
+                    {exec.initials}
+                  </span>
+                )}
                 <div>
                   <h3 className="text-[15px] font-semibold tracking-tight text-ink">
                     {exec.name}

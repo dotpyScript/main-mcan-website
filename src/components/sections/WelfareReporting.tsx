@@ -5,13 +5,8 @@ import { MessageCircle, PhoneCall, Siren } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { SITE } from '@/lib/constants';
 
-const WHATSAPP_MESSAGE =
-  "Assalamu Alaikum, I'm a corps member with an urgent welfare/safety concern. Name: / LGA: / PPA or Lodge: / Issue: ";
-
 const WelfareReporting = () => {
-  const whatsappHref = `https://wa.me/${SITE.emergencyWhatsapp}?text=${encodeURIComponent(
-    WHATSAPP_MESSAGE,
-  )}`;
+  const whatsappHref = `https://wa.me/${SITE.emergencyWhatsapp}`;
 
   return (
     <section id='welfare' className='bg-paper py-24 lg:py-32 lg:my-32'>

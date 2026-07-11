@@ -5,80 +5,56 @@ export type Executive = {
   lga: string;
   initials: string;
   mandate: string;
+  image?: string;
 };
 
 export const EXECUTIVES: Executive[] = [
   {
     id: 'amir',
-    name: 'Abdulrahman Yusuf',
+    name: 'Umar Abubakar',
     role: 'Amir (President)',
-    lga: 'Port Harcourt',
-    initials: 'AY',
+    lga: 'Phalga LGA',
+    initials: 'UA',
     mandate:
       'Leads the chapter, represents MCAN Rivers State, and chairs the executive council.',
   },
   {
-    id: 'naib-amirah',
-    name: 'Fatimah Bello',
-    role: "Naib Amirah (Vice President)",
+    id: 'naib-amir',
+    name: 'Ismail Ajibade',
+    role: 'Naib Amir',
+    lga: 'Port Harcourt',
+    initials: 'IA',
+    mandate: 'Deputises for the Amir and steps in to lead in his absence.',
+    image: '/Excos/2.jpeg',
+  },
+  {
+    id: 'amirah',
+    name: 'Abdullahi Aminat',
+    role: 'Amirah',
     lga: 'Obio-Akpor',
-    initials: 'FB',
-    mandate: "Deputises for the Amir and leads the sisters' wing of the chapter.",
+    initials: 'AA',
+    mandate:
+      "Leads the sisters' wing of the chapter and represents its members on the executive council.",
+    image: '/Excos/4.jpeg',
+  },
+  {
+    id: 'naib-amirah',
+    name: 'Adewoyin Ameenat',
+    role: 'Naib Amirah',
+    lga: 'Eleme',
+    initials: 'AM',
+    mandate:
+      "Deputises for the Amirah and supports coordination within the sisters' wing.",
+    image: '/Excos/3.jpeg',
   },
   {
     id: 'gen-sec',
-    name: 'Ibrahim Suleiman',
-    role: 'General Secretary',
-    lga: 'Eleme',
-    initials: 'IS',
-    mandate: 'Keeps chapter records and correspondence, and coordinates EXCO meetings.',
-  },
-  {
-    id: 'asst-sec',
-    name: 'Aisha Muhammed',
-    role: 'Assistant Secretary',
-    lga: 'Okrika',
-    initials: 'AM',
-    mandate: 'Supports the Secretary and stands in during their absence.',
-  },
-  {
-    id: 'fin-sec',
-    name: 'Yusuf Abdullahi',
-    role: 'Financial Secretary',
-    lga: 'Ikwerre',
-    initials: 'YA',
-    mandate: 'Tracks dues and donations, and prepares financial reports.',
-  },
-  {
-    id: 'treasurer',
-    name: 'Zainab Idris',
-    role: 'Treasurer',
-    lga: 'Emuoha',
-    initials: 'ZI',
-    mandate: 'Holds and disburses chapter funds for approved activities.',
-  },
-  {
-    id: 'pro',
-    name: 'Musa Aliyu',
-    role: 'Public Relations Officer',
-    lga: 'Bonny',
-    initials: 'MA',
-    mandate: 'Manages chapter communications, publicity, and external relations.',
-  },
-  {
-    id: 'welfare',
-    name: 'Hadiza Sani',
-    role: 'Welfare Officer',
-    lga: 'Etche',
-    initials: 'HS',
-    mandate: 'Coordinates lodging, feeding, and emergency support for members.',
-  },
-  {
-    id: 'dawah',
-    name: 'Umar Farouk',
-    role: "Da'wah Coordinator",
-    lga: 'Tai',
-    initials: 'UF',
-    mandate: "Organises halaqas, lectures, and outreach in host communities.",
+    name: 'Adeyemi Nurudeen',
+    role: 'Secretary General',
+    lga: 'Phalga LGA',
+    initials: 'AN',
+    mandate:
+      'Keeps chapter records and correspondence, and coordinates EXCO meetings.',
+    image: '/Excos/1.jpeg',
   },
 ];

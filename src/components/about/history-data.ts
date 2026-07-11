@@ -26,7 +26,8 @@ export const MILESTONES: Milestone[] = [
   {
     year: '2010',
     title: "Da'wah goes state-wide",
-    description: 'Outreach reaches every local government area in Rivers State.',
+    description:
+      'Outreach reaches every local government area in Rivers State.',
   },
   {
     year: '2019',
@@ -36,6 +37,7 @@ export const MILESTONES: Milestone[] = [
   {
     year: '2024',
     title: 'A state-wide movement',
-    description: '650+ members strong, coordinating welfare, da’wah, and mentorship.',
+    description:
+      '650+ members strong, coordinating welfare, da’wah, and mentorship.',
   },
 ];

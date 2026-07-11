@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, type FormEvent } from 'react';
+import Image from 'next/image';
 import { Mail, MapPin, Send, CheckCircle2 } from 'lucide-react';
 import Button from '@/components/ui/Button';
-import { SITE } from '@/lib/constants';
+import { SITE, SOCIALS } from '@/lib/constants';
 
 const REASONS = [
   'General inquiry',
@@ -90,6 +91,36 @@ const Contact = () => {
               <p className="mt-1 text-[15px] font-medium leading-snug text-ink">
                 {SITE.lodgeAddress}
               </p>
+            </div>
+
+            <div className="rounded-3xl border border-line-strong bg-paper p-6">
+              <p className="label-mono text-[10px] text-ink-faint">
+                Reach us on social media
+              </p>
+              <div className="mt-4 flex items-center gap-3">
+                {SOCIALS.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`MCAN on ${social.name}`}
+                    className="flex size-9 items-center justify-center rounded-full border border-line-strong text-[11px] font-semibold tracking-tight text-ink-soft transition-colors hover:border-forest hover:text-forest"
+                  >
+                    {social.icon ? (
+                      <Image
+                        src={social.icon}
+                        alt={social.name}
+                        width={16}
+                        height={16}
+                        className="size-4"
+                      />
+                    ) : (
+                      social.label
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
