@@ -1,4 +1,6 @@
 import { NextResponse } from 'next/server';
+import { transporter } from '@/lib/mailer';
+import { SITE } from '@/lib/constants';
 
 type ContactPayload = {
   name?: unknown;
@@ -22,8 +24,31 @@ export async function POST(request: Request) {
     );
   }
 
-  // TODO: wire this up to email delivery or a database once the backend is ready.
-  console.log('New contact submission:', { name, email, reason, message });
+  try {
+    await transporter.sendMail({
+      from: `"MCAN Rivers State Website" <${SITE.contactEmail}>`,
+      to: SITE.contactEmail,
+      replyTo: email,
+      subject: `New contact form message${reason ? `: ${reason}` : ''}`,
+      text: `Name: ${name}\nEmail: ${email}\nReason: ${reason || 'Not specified'}\n\n${message}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Reason:</strong> ${reason || 'Not specified'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br />')}</p>
+      `,
+    });
+  } catch (err) {
+    console.error('Failed to send contact email:', err);
+    return NextResponse.json(
+      {
+        success: false,
+        error: 'Something went wrong sending your message. Please try again.',
+      },
+      { status: 500 },
+    );
+  }
 
   return NextResponse.json({ success: true });
 }
