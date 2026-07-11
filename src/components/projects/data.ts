@@ -15,11 +15,11 @@ export const PROJECTS: Project[] = [
     title: 'The Rivers State Lodge Project',
     tagline: 'A permanent home for every corps member',
     description:
-      'Secure accommodation, a musallah, and a community under one roof — built by the chapter, for the chapter.',
-    image: '/images/ummah.jpg',
+      'Secure accommodation, a musallah, and a community under one roof — built phase by phase, funded by the ummah.',
+    image: '/images/project-image.jpg',
     priority: 1,
-    raised: 8_400_000,
-    goal: 25_000_000,
+    raised: 800_000,
+    goal: 100_000_000,
   },
   {
     id: 'dawah-fund',
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     tagline: 'A warm welcome to every new arrival',
     description:
       'Prayer mats, Qur’ans, and camp essentials for freshly deployed Muslim corps members.',
-    image: '/images/future.jpg',
+    image: '/images/feature.png',
     priority: 5,
     raised: 180_000,
     goal: 500_000,

@@ -96,7 +96,7 @@ export const PAST_EVENTS: PastEvent[] = [
     title: '2025 Annual General Meeting & Elections',
     recap:
       'The chapter elected its 2025/2026 executive council in a peaceful, well-attended election.',
-    image: '/images/future.jpg',
+    image: '/images/feature.png',
     date: '2025-12-14',
     location: 'Port Harcourt',
   },
