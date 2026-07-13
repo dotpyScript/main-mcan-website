@@ -46,6 +46,7 @@ export const NAV_LINKS = [
   { label: 'About', href: '/about' },
   { label: 'Projects', href: '/projects' },
   { label: 'Events', href: '/events' },
+  { label: 'Register', href: '/register' },
 ];
 
 export const RIVERS_LGAS = [
