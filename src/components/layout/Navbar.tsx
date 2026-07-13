@@ -69,6 +69,9 @@ const Navbar = () => {
         </div>
 
         <div className='hidden items-center gap-3 md:flex'>
+          <Button href='/register' size='md' variant='outline'>
+            Register
+          </Button>
           <Button
             href={SITE.donateUrl}
             external
@@ -107,17 +110,28 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
-          <Button
-            href={SITE.donateUrl}
-            external
-            size='md'
-            variant='solid'
-            trailingIcon={ArrowUpRight}
-            fullWidth
-            className='mt-4 bg-forest hover:bg-forest-deep'
-          >
-            Give to the Lodge
-          </Button>
+          <div className='mt-4 flex flex-col gap-3'>
+            <Button
+              href='/register'
+              onClick={() => setOpen(false)}
+              size='md'
+              variant='outline'
+              fullWidth
+            >
+              Register
+            </Button>
+            <Button
+              href={SITE.donateUrl}
+              external
+              size='md'
+              variant='solid'
+              trailingIcon={ArrowUpRight}
+              fullWidth
+              className='bg-forest hover:bg-forest-deep'
+            >
+              Give to the Lodge
+            </Button>
+          </div>
         </div>
       )}
     </header>
