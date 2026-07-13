@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import { NAV_LINKS, SITE } from '@/lib/constants';
@@ -10,6 +11,10 @@ import { NAV_LINKS, SITE } from '@/lib/constants';
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -48,13 +53,18 @@ const Navbar = () => {
 
         <div className='hidden items-center gap-1 md:flex'>
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
-              className='rounded-full px-4 py-2 text-sm font-medium text-ink-soft transition-colors hover:bg-ink/5 hover:text-ink'
+              aria-current={isActive(link.href) ? 'page' : undefined}
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                isActive(link.href)
+                  ? 'bg-forest/10 text-forest'
+                  : 'text-ink-soft hover:bg-ink/5 hover:text-ink'
+              }`}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -84,14 +94,17 @@ const Navbar = () => {
         <div className='border-t border-line bg-paper px-6 pb-6 pt-2 md:hidden'>
           <div className='flex flex-col'>
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className='border-b border-line py-3.5 text-[15px] font-medium text-ink-soft'
+                aria-current={isActive(link.href) ? 'page' : undefined}
+                className={`border-b border-line py-3.5 text-[15px] font-medium ${
+                  isActive(link.href) ? 'text-forest' : 'text-ink-soft'
+                }`}
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
           <Button

@@ -30,8 +30,7 @@ export const UPCOMING_EVENTS: EventItem[] = [
   {
     id: 'weekly-halaqa',
     title: 'Weekly Halaqa: Tafsir of Surah Al-Kahf',
-    description:
-      'A weekly tafsir circle open to all corps members and alumni.',
+    description: 'A weekly tafsir circle open to all corps members and alumni.',
     image: '/images/dawah.jpg',
     date: '2026-07-10',
     startTime: '17:30',
@@ -58,7 +57,7 @@ export const UPCOMING_EVENTS: EventItem[] = [
     title: "Sisters' Career & Skills Workshop",
     description:
       'CV clinics, interview prep, and a panel of alumni professionals.',
-    image: '/images/sisterhood.jpg',
+    image: '/images/sisterhood.png',
     date: '2026-08-02',
     startTime: '11:00',
     endTime: '15:00',
@@ -71,7 +70,7 @@ export const UPCOMING_EVENTS: EventItem[] = [
     title: "Inter-LGA Da'wah Outreach",
     description:
       'Door-to-door outreach and free medical screening in partnership with host communities.',
-    image: '/images/welfare.jpg',
+    image: '/images/welfare.png',
     date: '2026-08-15',
     startTime: '08:00',
     endTime: '14:00',

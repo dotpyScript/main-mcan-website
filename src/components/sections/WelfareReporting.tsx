@@ -61,7 +61,7 @@ const WelfareReporting = () => {
                 tone='onDark'
                 variant='solid'
                 icon={MessageCircle}
-                className='text-ember-night shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)]'
+                className='h-auto min-h-14 whitespace-normal text-center leading-snug text-ember-night shadow-[0_20px_40px_-15px_rgba(0,0,0,0.6)] sm:h-14 sm:whitespace-nowrap'
               >
                 Report Welfare Issue Now
               </Button>

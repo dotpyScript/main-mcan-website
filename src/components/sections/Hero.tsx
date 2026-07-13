@@ -66,14 +66,14 @@ const Hero = () => {
           className='mt-10 flex flex-col items-center gap-4 sm:flex-row'
         >
           <Button
-            href='#chapters'
+            href='/projects#lodges'
             variant='solid'
             trailingIcon={ArrowRight}
             className='bg-ink hover:bg-forest-night'
           >
             Find Lodge
           </Button>
-          <Button href='#mission' variant='outline'>
+          <Button href={SITE.nyscCampMapUrl} external variant='outline'>
             NYSC Camp Guide
           </Button>
         </motion.div>

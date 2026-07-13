@@ -38,7 +38,7 @@ export const PROJECTS: Project[] = [
     tagline: 'Dedicated care for our sisters in service',
     description:
       'Transport, feeding, and emergency support for female corps members across the state.',
-    image: '/images/welfare.jpg',
+    image: '/images/welfare.png',
     priority: 3,
     raised: 340_000,
     goal: 900_000,
@@ -71,7 +71,7 @@ export const PROJECTS: Project[] = [
     tagline: 'No one celebrates alone',
     description:
       'Iftar packs and Eid gifts for corps members serving far from home during the blessed seasons.',
-    image: '/images/sisterhood.jpg',
+    image: '/images/sisterhood.png',
     priority: 6,
     raised: 95_000,
     goal: 400_000,
