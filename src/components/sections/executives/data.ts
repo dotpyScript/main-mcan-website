@@ -17,6 +17,7 @@ export const EXECUTIVES: Executive[] = [
     initials: 'UA',
     mandate:
       'Leads the chapter, represents MCAN Rivers State, and chairs the executive council.',
+    image: '/Excos/5.jpeg',
   },
   {
     id: 'naib-amir',
