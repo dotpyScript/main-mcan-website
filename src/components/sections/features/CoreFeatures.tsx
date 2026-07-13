@@ -2,6 +2,7 @@
 
 import { useRef, useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import {
   AnimatePresence,
   motion,
@@ -10,8 +11,37 @@ import {
   useTransform,
 } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import { FEATURES } from './data';
+import { FEATURES, type FeatureSlide } from './data';
 import ProgressRail from './ProgressRail';
+
+const FeatureCta = ({
+  feature,
+  className,
+}: {
+  feature: FeatureSlide;
+  className: string;
+}) => {
+  if (feature.external) {
+    return (
+      <a
+        href={feature.href}
+        target='_blank'
+        rel='noopener noreferrer'
+        className={className}
+      >
+        {feature.cta}
+        <ArrowRight className='size-4 transition-transform group-hover:translate-x-1' />
+      </a>
+    );
+  }
+
+  return (
+    <Link href={feature.href} className={className}>
+      {feature.cta}
+      <ArrowRight className='size-4 transition-transform group-hover:translate-x-1' />
+    </Link>
+  );
+};
 
 const DesktopScrollytelling = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -110,13 +140,10 @@ const DesktopScrollytelling = () => {
                   <p className='mt-5 max-w-md text-base leading-relaxed text-paper/65'>
                     {feature.description}
                   </p>
-                  <a
-                    href='#'
+                  <FeatureCta
+                    feature={feature}
                     className='group mt-7 inline-flex items-center gap-2 text-sm font-semibold text-gold-soft'
-                  >
-                    {feature.cta}
-                    <ArrowRight className='size-4 transition-transform group-hover:translate-x-1' />
-                  </a>
+                  />
                 </motion.div>
               </AnimatePresence>
 
@@ -174,13 +201,10 @@ const MobileFeatureList = () => {
               <p className='mt-3 text-[15px] leading-relaxed text-paper/65'>
                 {feature.description}
               </p>
-              <a
-                href='#'
+              <FeatureCta
+                feature={feature}
                 className='group mt-4 inline-flex items-center gap-2 text-sm font-semibold text-gold-soft'
-              >
-                {feature.cta}
-                <ArrowRight className='size-4 transition-transform group-hover:translate-x-1' />
-              </a>
+              />
             </motion.div>
           );
         })}

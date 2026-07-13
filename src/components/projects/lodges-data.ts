@@ -32,7 +32,7 @@ export const LODGES: Lodge[] = [
     name: 'Eleme Waterside Lodge',
     lga: 'Eleme',
     address: '22 Refinery Road, Eleme, Rivers State',
-    image: '/images/welfare.jpg',
+    image: '/images/welfare.png',
     lat: 4.783,
     lng: 7.1236,
   },
